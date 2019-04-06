@@ -1,6 +1,10 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
+function echo(input) {
+  console.log(input);
+}
+
 client.login("NDU1NTI5Mjc0ODUwNjcyNjQx.DruwsA.tJpQPP3Mr4E01ftQZaKZq-1Opps") 
 
 client.on('ready', () => {
@@ -61,39 +65,8 @@ function pomocCommand(arguments,receivedMessage){
     receivedMessage.channel.send("Cinimise da ti triba malo pomoci, naci ovako:...") // ADD THE HELP COMMANDS
 }
 
-// Responses
-
-//client.on('message', (receivedMessage) =>{
-//    if (receivedMessage.author == client.user){
-//       return
-//   }
-//   if (receivedMessage.content == "Za dom!"){
-//       receivedMessage.channel.send("Spremni!")
-//   }
-//});
-
 client.on('message', msg => {
     if (msg.content === 'Za dom!') {
-      msg.reply('Spremni!');
-    }
-  });
-client.on('message', msg => {
-    if (msg.content === 'za dom!') {
-      msg.reply('Spremni!');
-    }
-  });
-client.on('message', msg => {
-    if (msg.content === 'Za dom') {
-      msg.reply('Spremni!');
-    }
-  });
-client.on('message', msg => {
-    if (msg.content === 'Za Dom!') {
-      msg.reply('Spremni!');
-    }
-  });
-client.on('message', msg => {
-    if (msg.content === 'za dom') {
       msg.reply('Spremni!');
     }
   });
@@ -134,8 +107,3 @@ client.on('message', message => {
     }
   }
 });
-
-
-function echo(input) {
-  console.log(input);
-}
